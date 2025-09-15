@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Open Graph (controla o preview nas redes/Discord) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PLS Donate">
+  <meta property="og:description" content="Jogue PLS Donate — diversão e doações. Clique para entrar.">
+  <meta property="og:image" content="https://seuusuario.github.io/pls-preview/img/plsdonate.png">
+  <meta property="og:url" content="https://seuusuario.github.io/pls-preview/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PLS Donate">
+  <meta name="twitter:description" content="Jogue PLS Donate — diversão e doações. Clique para entrar.">
+  <meta name="twitter:image" content="https://seuusuario.github.io/pls-preview/img/plsdonate.png">
+
+  <title>PLS Donate — carregando...</title>
+
+  <!-- Redirect: este é o link que você mandou -->
+  <meta name="redirect-target" content="https://www.roblox.com/share?code=fb8630fd6622b2478270841221c7b073&type=Server">
+  <meta name="robots" content="noindex, nofollow">
+
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Arial;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#0b0b0b;color:#fff}
+    .box{max-width:520px;padding:28px;border-radius:12px;text-align:center;backdrop-filter:blur(4px)}
+    img.logo{max-width:180px;margin-bottom:18px}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img class="logo" src="img/plsdonate.png" alt="PLS Donate">
+    <h1>PLS Donate</h1>
+    <p>Redirecionando para o jogo… se não for redirecionado, <a id="link" href="#">clique aqui</a>.</p>
+  </div>
+
+  <script>
+    (function(){
+      const meta = document.querySelector('meta[name="redirect-target"]');
+      const target = meta ? meta.content : null;
+      const a = document.getElementById('link');
+      if(target){
+        a.href = target;
+        setTimeout(()=> { window.location.replace(target); }, 300);
+      } else {
+        a.textContent = 'Link não configurado';
+      }
+    })();
+  </script>
+</body>
+</html>
